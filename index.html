@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nadine Bellombre — Chanteuse Jazz, Soul, Séga & Reggae. Rose Hill, Île Maurice. Voix, composition, scène.">
+  <title>Nadine Bellombre — Chanteuse Jazz · Île Maurice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="cur-dot"></div>
+  <div id="cur-ring"></div>
+
+  <!-- ── BRUIT DE SCÈNE (canvas JS) ── -->
+  <canvas id="stage-noise" aria-hidden="true"></canvas>
+
+  <!-- ══════════════════════════
+       NAV
+  ══════════════════════════ -->
+  <nav id="navbar">
+    <a href="#home" class="nav-logo">
+      <span class="logo-n">N</span><span class="logo-dot">·</span><span class="logo-b">B</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html"        class="nav-a" data-fr="Accueil"    data-en="Home">Accueil</a></li>
+      <li><a href="biographie.html"   class="nav-a" data-fr="Biographie" data-en="Biography">Biographie</a></li>
+      <li><a href="parcours.html"     class="nav-a" data-fr="Parcours"   data-en="Journey">Parcours</a></li>
+      <li><a href="musique.html"      class="nav-a" data-fr="Musique"    data-en="Music">Musique</a></li>
+      <li><a href="galerie.html"      class="nav-a" data-fr="Galerie"    data-en="Gallery">Galerie</a></li>
+      <li><a href="contact.html"      class="nav-a nav-cta" data-fr="Contact" data-en="Contact">Contact</a></li>
+      <li><button class="lang-toggle" id="langBtn">EN</button></li>
+    </ul>
+  </nav>
+
+  <!-- ══════════════════════════
+       HERO — SCÈNE
+  ══════════════════════════ -->
+  <section id="home" class="hero">
+
+    <!-- Spotlight venant du haut -->
+    <div class="spotlight" aria-hidden="true"></div>
+
+    <!-- Portée musicale décorative -->
+    <div class="staff" aria-hidden="true">
+      <div class="staff-line"></div><div class="staff-line"></div>
+      <div class="staff-line"></div><div class="staff-line"></div>
+      <div class="staff-line"></div>
+    </div>
+
+    <!-- Notes flottantes -->
+    <div class="floating-notes" aria-hidden="true">
+      <span class="fn fn1">♩</span>
+      <span class="fn fn2">♪</span>
+      <span class="fn fn3">♫</span>
+      <span class="fn fn4">♬</span>
+      <span class="fn fn5">♩</span>
+      <span class="fn fn6">♪</span>
+    </div>
+
+    <div class="hero-content">
+
+      <!-- Origine -->
+      <p class="hero-origin" data-fr="Rose Hill · Île Maurice · Océan Indien" data-en="Rose Hill · Mauritius · Indian Ocean">
+        Rose Hill · Île Maurice · Océan Indien
+      </p>
+
+      <!-- Nom principal -->
+      <h1 class="hero-name">
+        <span class="name-nadine">Nadine</span>
+        <span class="name-bellombre">Bellombre</span>
+      </h1>
+
+      <!-- Trait musical -->
+      <div class="hero-divider" aria-hidden="true">
+        <span class="hd-line"></span>
+        <span class="hd-mic">🎤</span>
+        <span class="hd-line"></span>
+      </div>
+
+      <!-- Identité musicale — VISIBLE DÈS LE PREMIER SCROLL -->
+      <div class="hero-identity">
+        <span class="genre" data-genre="jazz">Jazz</span>
+        <span class="genre-sep">·</span>
+        <span class="genre" data-genre="soul">Soul</span>
+        <span class="genre-sep">·</span>
+        <span class="genre" data-genre="sega">Séga</span>
+        <span class="genre-sep">·</span>
+        <span class="genre" data-genre="reggae">Reggae</span>
+      </div>
+
+      <!-- Citation -->
+      <blockquote class="hero-quote" data-fr="« Une voix qui transporte vers des rêves imaginaires »" data-en="« A voice that carries you into imaginary dreams »">
+        « Une voix qui transporte vers des rêves imaginaires »
+      </blockquote>
+
+      <!-- CTA scroll -->
+      <a href="#about" class="hero-cta">
+        <span data-fr="Découvrir son univers" data-en="Discover her world">Découvrir son univers</span>
+        <span class="cta-arrow">↓</span>
+      </a>
+
+    </div>
+
+    <!-- Vinyle décoratif -->
+    <div class="vinyl-deco" aria-hidden="true">
+      <div class="vinyl-grooves"></div>
+      <div class="vinyl-center">
+        <span>N·B</span>
+      </div>
+    </div>
+
+    <!-- Texte vertical latéral -->
+    <p class="hero-side-text" aria-hidden="true">Chanteuse · Compositrice · Performeuse</p>
+
+  </section>
+
+  <!-- ══════════════════════════
+       RUBAN ANIMÉ (entre hero et about)
+  ══════════════════════════ -->
+  <div class="ribbon-band" aria-hidden="true">
+    <div class="ribbon-inner">
+      <span>Jazz</span><span class="rb-dot">✦</span>
+      <span>Soul</span><span class="rb-dot">✦</span>
+      <span>Séga</span><span class="rb-dot">✦</span>
+      <span>Reggae</span><span class="rb-dot">✦</span>
+      <span>Île Maurice</span><span class="rb-dot">✦</span>
+      <span>25+ ans de scène</span><span class="rb-dot">✦</span>
+      <span>Jazz</span><span class="rb-dot">✦</span>
+      <span>Soul</span><span class="rb-dot">✦</span>
+      <span>Séga</span><span class="rb-dot">✦</span>
+      <span>Reggae</span><span class="rb-dot">✦</span>
+      <span>Île Maurice</span><span class="rb-dot">✦</span>
+      <span>25+ ans de scène</span><span class="rb-dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════
+       ABOUT — QUI EST NADINE
+  ══════════════════════════ -->
+  <section id="about" class="section about-section">
+    <div class="container">
+
+      <div class="section-eyebrow" data-fr="À propos" data-en="About">À propos</div>
+      <h2 class="section-h2">Nadine Bellombre</h2>
+
+      <div class="about-layout">
+
+        <div class="about-photo-col" data-aos>
+          <div class="photo-frame">
+            <img src="assets/IMG-20260407-WA0011.jpg" alt="Nadine Bellombre" class="bio-photo">
+            <div class="photo-caption">
+              <span data-fr="Rose Hill, Île Maurice" data-en="Rose Hill, Mauritius">Rose Hill, Île Maurice</span>
+            </div>
+          </div>
+          <!-- Stats verticales -->
+          <div class="stat-stack">
+            <div class="stat-pill">
+              <span class="stat-num">25<sup>+</sup></span>
+              <span class="stat-label" data-fr="ans de scène" data-en="years on stage">ans de scène</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-num">3</span>
+              <span class="stat-label" data-fr="compositions" data-en="compositions">compositions</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-num">1</span>
+              <span class="stat-label" data-fr="album jazz" data-en="jazz album">album jazz</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text-col" data-aos>
+          <p class="bio-intro"
+            data-fr="Chanteuse professionnelle depuis les années 90, soliste et choriste — une voix enracinée à l'île Maurice, nourrie de rencontres musicales en France et dans l'océan Indien."
+            data-en="Professional singer since the 90s, soloist and backing vocalist — a voice rooted in Mauritius, shaped by musical encounters in France and across the Indian Ocean.">
+            Chanteuse professionnelle depuis les années 90, soliste et choriste — une voix enracinée à l'île Maurice, nourrie de rencontres musicales en France et dans l'océan Indien.
+          </p>
+
+          <p class="bio-body-text"
+            data-fr="Native de l'île Maurice, Nadine Bellombre débute à 16 ans, portée par la soul, le reggae et le séga — le rythme ancré dans l'âme mauricienne. Des premières collaborations avec les figures de l'océan Indien aux scènes jazz internationales, sa voix a traversé continents et styles avec la même présence naturelle."
+            data-en="Born in Mauritius, Nadine began at 16, carried by soul, reggae and séga — the rhythm rooted in the Mauritian soul. From early collaborations with Indian Ocean figures to international jazz stages, her voice has crossed continents and styles with the same natural presence.">
+            Native de l'île Maurice, Nadine Bellombre débute à 16 ans, portée par la soul, le reggae et le séga — le rythme ancré dans l'âme mauricienne. Des premières collaborations avec les figures de l'océan Indien aux scènes jazz internationales, sa voix a traversé continents et styles avec la même présence naturelle.
+          </p>
+
+          <a href="biographie.html" class="read-more-btn">
+            <span data-fr="Lire sa biographie" data-en="Read her biography">Lire sa biographie</span>
+            <span class="rmb-arrow">→</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════
+       CONCERT — PROCHAIN SHOW
+  ══════════════════════════ -->
+  <section id="concert" class="section concert-section">
+    <div class="container">
+
+      <div class="section-eyebrow concert-eyebrow" data-fr="Prochain Concert" data-en="Upcoming Concert">Prochain Concert</div>
+
+      <div class="concert-card">
+
+        <div class="concert-header">
+          <div class="concert-venue-badge">
+            <svg width="12" height="12" viewBox="0 0 14 14"><path d="M7 1a4 4 0 0 1 4 4c0 3-4 8-4 8S3 8 3 5a4 4 0 0 1 4-4z" stroke="currentColor" stroke-width="1.2" fill="none"/><circle cx="7" cy="5" r="1.5" fill="currentColor"/></svg>
+            <span data-fr="Ishøj Teater, Tranegilde — Danemark" data-en="Ishøj Teater, Tranegilde — Denmark">Ishøj Teater, Tranegilde — Danemark</span>
+          </div>
+          <div class="concert-lang-flags">
+            <button class="concert-flag-btn" id="concertFlagDK" data-concert-lang="dk" title="Læs på dansk" aria-pressed="false">🇩🇰</button>
+          </div>
+        </div>
+
+        <h2 class="concert-title">Søren Lee &amp; Emil Hess Quartet</h2>
+        <p class="concert-featuring"
+           data-fr="avec la voix invitée de Nadine Bellombre"
+           data-en="featuring guest vocals by Nadine Bellombre"
+           data-dk="med gæstevokal af Nadine Bellombre">
+          avec la voix invitée de <strong>Nadine Bellombre</strong>
+        </p>
+
+        <div class="concert-desc-block">
+          <p class="concert-desc concert-text concert-text-fr">
+            Une soirée de jazz avec quelques-uns des musiciens les plus marquants du Danemark.
+            Le guitariste Søren Lee et le saxophoniste Emil Hess conduisent un quartet puissant avec le bassiste
+            Jesper Bodilsen et le batteur Jacob Roved. Ensemble, ils créent un univers musical vivant et intime où tradition et renouveau se fondent.<br><br>
+            La musique sera composée de compositions originales ainsi que de standards jazz classiques choisis,
+            interprétés avec personnalité, chaleur et un fort sens de l'improvisation — entre le ton nordique et la tradition jazz américaine.<br><br>
+            La soirée est sublimée par la voix invitée de <strong>Nadine Bellombre</strong>, dont la voix chaude et expressive sera mise en valeur sur des titres sélectionnés.
+          </p>
+          <p class="concert-desc concert-text concert-text-en" style="display:none">
+            An evening of jazz featuring some of Denmark's most prominent musicians.
+            Guitarist Søren Lee and saxophonist Emil Hess lead a strong quartet with bassist Jesper Bodilsen and drummer Jacob Roved. Together, they create a vibrant and intimate musical universe where tradition and innovation come together.<br><br>
+            The music will consist of original compositions as well as selected classic jazz standards, interpreted with personality, warmth, and a strong sense of improvisation — between the Nordic tone and the American jazz tradition.<br><br>
+            The evening is further enhanced by guest vocals from <strong>Nadine Bellombre</strong>, whose warm and expressive voice will be featured on selected songs.
+          </p>
+          <p class="concert-desc concert-text concert-text-dk" style="display:none">
+            En aften i jazzens tegn med nogle af Danmarks mest markante musikere.
+            Guitaristen Søren Lee og saxofonisten Emil Hess står i spidsen for en stærk kvartet med bassist Jesper Bodilsen og trommeslager Jacob Roved. Sammen skaber de et levende og nærværende musikalsk univers, hvor tradition og fornyelse smelter sammen.<br><br>
+            Musikken vil bestå af originale kompositioner samt udvalgte klassiske jazzstandards, fortolket med personlighed, varme og improvisatorisk overskud — i spændingsfeltet mellem den nordiske tone og den amerikanske jazztradition.<br><br>
+            Aftenen får et ekstra løft med gæstevokal af <strong>Nadine Bellombre</strong>, der med sin varme og personlige stemme medvirker på udvalgte numre.
+          </p>
+        </div>
+
+        <div class="lineup">
+          <div class="lineup-title" data-fr="Line-up" data-en="Line-up" data-dk="Line-up">Line-up</div>
+          <div class="lineup-grid">
+            <div class="lineup-item"><span class="lineup-name">Søren Lee</span><span class="lineup-role" data-fr="Guitare" data-en="Guitar" data-dk="guitar">Guitare</span></div>
+            <div class="lineup-item"><span class="lineup-name">Emil Hess</span><span class="lineup-role" data-fr="Saxophone" data-en="Saxophone" data-dk="saxophone">Saxophone</span></div>
+            <div class="lineup-item"><span class="lineup-name">Jesper Bodilsen</span><span class="lineup-role" data-fr="Contrebasse" data-en="Bass" data-dk="bas">Contrebasse</span></div>
+            <div class="lineup-item"><span class="lineup-name">Jacob Roved</span><span class="lineup-role" data-fr="Batterie" data-en="Drums" data-dk="trommer">Batterie</span></div>
+            <div class="lineup-item lineup-item-star"><span class="lineup-name">Nadine Bellombre</span><span class="lineup-role" data-fr="Voix (invitée)" data-en="Vocals (guest)" data-dk="vokal (gæst)">Voix (invitée)</span></div>
+          </div>
+        </div>
+
+        <blockquote class="concert-quote"
+          data-fr="« Un concert d'intensité, de présence et de classe internationale »"
+          data-en="« A concert of intensity, presence, and international class »"
+          data-dk="« En koncert med intensitet, nærvær og international klasse »">
+          « Un concert d'intensité, de présence et de classe internationale »
+        </blockquote>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════
+       FOOTER
+  ══════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">Nadine Bellombre</div>
+          <p class="footer-tagline" data-fr="Artiste Vocale · Jazz · Île Maurice" data-en="Vocal Artist · Jazz · Mauritius">Artiste Vocale · Jazz · Île Maurice</p>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html"      data-fr="Accueil"    data-en="Home">Accueil</a>
+          <a href="biographie.html" data-fr="Biographie" data-en="Biography">Biographie</a>
+          <a href="parcours.html"   data-fr="Parcours"   data-en="Journey">Parcours</a>
+          <a href="musique.html"    data-fr="Musique"    data-en="Music">Musique</a>
+          <a href="galerie.html"    data-fr="Galerie"    data-en="Gallery">Galerie</a>
+          <a href="contact.html"    data-fr="Contact"    data-en="Contact">Contact</a>
+        </nav>
+        <div class="footer-legal">
+          <p data-fr="Nom légal : Marie Nadine Annabelle Bellombre" data-en="Legal name: Marie Nadine Annabelle Bellombre">Nom légal : Marie Nadine Annabelle Bellombre</p>
+          <p>nadbello@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Nadine Bellombre</p>
+        <p class="footer-note" data-fr="Tous droits réservés" data-en="All rights reserved">Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

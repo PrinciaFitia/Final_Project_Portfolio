@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Contactez Nadine Bellombre pour des projets, collaborations ou bookings de concerts de jazz.">
+  <title>Contact — Nadine Bellombre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Outfit:wght@200;300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-section {
+      padding-top: 150px;
+      min-height: 80vh;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Custom cursor -->
+  <div id="cur-dot"></div>
+  <div id="cur-ring"></div>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">
+      <span>N</span><span class="logo-sep">·</span><span>B</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html" class="nav-a" data-fr="Accueil" data-en="Home">Accueil</a></li>
+      <li><a href="biographie.html" class="nav-a" data-fr="Biographie" data-en="Biography">Biographie</a></li>
+      <li><a href="parcours.html" class="nav-a" data-fr="Parcours" data-en="Journey">Parcours</a></li>
+      <li><a href="musique.html" class="nav-a" data-fr="Musique" data-en="Music">Musique</a></li>
+      <li><a href="galerie.html" class="nav-a" data-fr="Galerie" data-en="Gallery">Galerie</a></li>
+      <li><a href="contact.html" class="nav-a nav-cta" data-fr="Contact" data-en="Contact">Contact</a></li>
+      <li><button class="lang-toggle" id="langBtn">EN</button></li>
+    </ul>
+  </nav>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+
+      <div class="section-eyebrow" data-fr="Contact" data-en="Contact">Contact</div>
+      <h2 class="section-h2 contact-h2" data-fr="Travaillons ensemble" data-en="Let's work together">Travaillons
+        ensemble</h2>
+      <p class="contact-sub" data-fr="Bookings · Collaborations · Festivals · Financements"
+        data-en="Bookings · Collaborations · Festivals · Funding">Bookings · Collaborations · Festivals · Financements
+      </p>
+
+      <div class="contact-layout">
+
+        <div class="contact-left">
+          <div class="info-block">
+            <div class="info-label" data-fr="Email" data-en="Email">Email</div>
+            <div class="info-val">nadbello@gmail.com</div>
+          </div>
+          <div class="info-block">
+            <div class="info-label" data-fr="Basée à" data-en="Based in">Basée à</div>
+            <div class="info-val" data-fr="Rose Hill, Île Maurice" data-en="Rose Hill, Mauritius">Rose Hill, Île Maurice
+            </div>
+          </div>
+          <div class="info-block">
+            <div class="info-label" data-fr="Réseaux" data-en="Social">Réseaux</div>
+            <div class="socials-row">
+              <a href="https://web.facebook.com/bellombrenadine81" target="_blank" rel="noopener"
+                class="soc-link">Facebook</a>
+              <a href="https://www.instagram.com/bellombrenadine81" target="_blank" rel="noopener"
+                class="soc-link">Instagram</a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" name="contact" netlify novalidate>
+          <input type="hidden" name="form-name" value="contact">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="fname" data-fr="Nom" data-en="Name">Nom</label>
+              <input type="text" id="fname" name="name" placeholder="Votre nom" required>
+              <span class="ferr" id="fnameErr" data-fr="Requis" data-en="Required">Requis</span>
+            </div>
+            <div class="form-field">
+              <label for="femail" data-fr="Email" data-en="Email">Email</label>
+              <input type="email" id="femail" name="email" placeholder="email@exemple.com" required>
+              <span class="ferr" id="femailErr" data-fr="Email invalide" data-en="Invalid email">Email invalide</span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="ftype" data-fr="Objet" data-en="Subject">Objet</label>
+            <select id="ftype" name="type">
+              <option value="" data-fr="Choisir..." data-en="Choose...">Choisir...</option>
+              <option value="booking" data-fr="Booking / Concert" data-en="Booking / Concert">Booking / Concert</option>
+              <option value="festival" data-fr="Festival" data-en="Festival">Festival</option>
+              <option value="financement" data-fr="Financement artistique" data-en="Artistic funding">Financement
+                artistique</option>
+              <option value="collab" data-fr="Collaboration musicale" data-en="Musical collaboration">Collaboration
+                musicale</option>
+              <option value="presse" data-fr="Presse / Médias" data-en="Press / Media">Presse / Médias</option>
+              <option value="autre" data-fr="Autre" data-en="Other">Autre</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="fmsg" data-fr="Message" data-en="Message">Message</label>
+            <textarea id="fmsg" name="message" rows="5" placeholder="Décrivez votre projet..." required></textarea>
+            <span class="ferr" id="fmsgErr" data-fr="Message requis" data-en="Message required">Message requis</span>
+          </div>
+
+          <button type="submit" class="form-submit" id="submitBtn">
+            <span class="submit-label" data-fr="Envoyer" data-en="Send">Envoyer</span>
+            <span class="submit-icon">→</span>
+          </button>
+
+          <div class="form-ok" id="formOk" data-fr="Message envoyé ! Nadine vous répond bientôt."
+            data-en="Message sent! Nadine will get back to you soon.">
+            Message envoyé ! Nadine vous répond bientôt.
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">Nadine Bellombre</div>
+          <p class="footer-sub" data-fr="Artiste Vocale · Jazz · Île Maurice" data-en="Vocal Artist · Jazz · Mauritius">
+            Artiste Vocale · Jazz · Île Maurice</p>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a>
+          <a href="biographie.html" data-fr="Biographie" data-en="Biography">Biographie</a>
+          <a href="parcours.html" data-fr="Parcours" data-en="Journey">Parcours</a>
+          <a href="musique.html" data-fr="Musique" data-en="Music">Musique</a>
+          <a href="galerie.html" data-fr="Galerie" data-en="Gallery">Galerie</a>
+          <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+        </nav>
+        <div class="footer-legal">
+          <p data-fr="Nom légal : Marie Nadine Annabelle Bellombre"
+            data-en="Legal name: Marie Nadine Annabelle Bellombre">Nom légal : Marie Nadine Annabelle Bellombre</p>
+          <p>nadbello@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Nadine Bellombre</p>
+        <p class="footer-note" data-fr="Tous droits réservés" data-en="All rights reserved">Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

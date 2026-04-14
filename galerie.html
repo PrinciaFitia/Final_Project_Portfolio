@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Découvrez les archives visuelles et photographiques de Nadine Bellombre en scène et en enregistrement studio.">
+  <title>Galerie — Nadine Bellombre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gallery-section { padding-top: 150px; min-height: 100vh; }
+  </style>
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div id="cur-dot"></div>
+  <div id="cur-ring"></div>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">
+      <span>N</span><span class="logo-sep">·</span><span>B</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html" class="nav-a" data-fr="Accueil" data-en="Home">Accueil</a></li>
+      <li><a href="biographie.html" class="nav-a" data-fr="Biographie" data-en="Biography">Biographie</a></li>
+      <li><a href="parcours.html" class="nav-a" data-fr="Parcours" data-en="Journey">Parcours</a></li>
+      <li><a href="musique.html" class="nav-a" data-fr="Musique" data-en="Music">Musique</a></li>
+      <li><a href="galerie.html" class="nav-a" data-fr="Galerie" data-en="Gallery">Galerie</a></li>
+      <li><a href="contact.html" class="nav-a nav-cta" data-fr="Contact" data-en="Contact">Contact</a></li>
+      <li><button class="lang-toggle" id="langBtn">EN</button></li>
+    </ul>
+  </nav>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section gallery-section" style="position: relative; overflow: hidden;">
+    
+    <!-- Décorations Musicales Jazz -->
+    <div class="notes-bg">
+      <span class="note n1">♪</span>
+      <span class="note n2">♫</span>
+      <span class="note n3">♬</span>
+      <span class="note n4">♪</span>
+      <span class="note n5">♭</span>
+      <span class="note n6">♮</span>
+    </div>
+
+    <div class="container" style="position: relative; z-index: 2; padding-bottom: 20px;">
+
+      <div class="section-eyebrow" data-fr="Galerie" data-en="Gallery">Galerie</div>
+      <h2 class="section-h2" data-fr="Scène, Studio & Jazz" data-en="Stage, Studio & Jazz">Scène, Studio & Jazz</h2>
+
+      <div class="gallery-filters" data-aos>
+        <button class="gf-btn active" data-cat="all" data-fr="Tout" data-en="All">Tout</button>
+        <button class="gf-btn" data-cat="scene" data-fr="Scène" data-en="Stage">Scène</button>
+        <button class="gf-btn" data-cat="studio" data-fr="Studio" data-en="Studio">Studio</button>
+        <button class="gf-btn" data-cat="portrait" data-fr="Portraits" data-en="Portraits">Portraits</button>
+      </div>
+
+      <div class="gallery-carousel" id="galleryGrid">
+
+        <!-- PORTRAIT -->
+        <div class="gm-item" data-cat="portrait" data-aos>
+          <img src="assets/20240308_185658.jpg" alt="Portrait">
+          <div class="gm-overlay"></div>
+          <div class="gm-hover">
+            <span class="gm-tag" data-fr="Portrait" data-en="Portrait">Portrait</span>
+            <h3 class="gm-title" data-fr="Shooting Noir & Blanc" data-en="B&W Shooting">Shooting Noir & Blanc</h3>
+          </div>
+        </div>
+
+        <div class="gm-item" data-cat="portrait" data-aos>
+          <img src="assets/IMG-20230919-WA0103.jpg" alt="Portrait">
+          <div class="gm-overlay"></div>
+          <div class="gm-hover">
+            <span class="gm-tag" data-fr="Portrait" data-en="Portrait">Portrait</span>
+            <h3 class="gm-title" data-fr="Naturel" data-en="Natural">Naturel</h3>
+          </div>
+        </div>
+
+        <div class="gm-item gm-large" data-cat="portrait" data-aos>
+          <img src="assets/IMG-20240305-WA0019.jpg" alt="Portrait Studio">
+          <div class="gm-overlay"></div>
+          <div class="gm-hover">
+            <span class="gm-tag" data-fr="Portrait" data-en="Portrait">Portrait</span>
+            <h3 class="gm-title" data-fr="Séance Photo" data-en="Photoshoot">Séance Photo</h3>
+          </div>
+        </div>
+
+        <!-- SCÈNE -->
+        <div class="gm-item gm-large" data-cat="scene" data-aos>
+          <img src="assets/2024-08-09 11.24.19.jpg" alt="Live sur scène">
+          <div class="gm-overlay"></div>
+          <div class="gm-hover">
+            <span class="gm-tag" data-fr="Scène" data-en="Stage">Scène</span>
+            <h3 class="gm-title" data-fr="Live avec lumière bleue" data-en="Live in Blue Light">Live avec lumière bleue</h3>
+          </div>
+        </div>
+
+        <div class="gm-item gm-wide" data-cat="scene" data-aos>
+          <img src="assets/20221226_185150.jpg" alt="Concert Live">
+          <div class="gm-overlay"></div>
+          <div class="gm-hover">
+            <span class="gm-tag" data-fr="Performance" data-en="Performance">Performance</span>
+            <h3 class="gm-title" data-fr="Concert" data-en="Concert">Concert</h3>
+          </div>
+        </div>
+
+        <div class="gm-item" data-cat="scene" data-aos>
+          <img src="assets/FB_IMG_1642977544996.jpg" alt="Performance Live">
+          <div class="gm-overlay"></div>
+          <div class="gm-hover">
+            <span class="gm-tag" data-fr="Duo" data-en="Duet">Duo</span>
+            <h3 class="gm-title" data-fr="Scène à deux" data-en="Stage for Two">Scène à deux</h3>
+          </div>
+        </div>
+
+        <div class="gm-item gm-wide" data-cat="scene" data-aos>
+          <img src="assets/FB_IMG_1642977646361.jpg" alt="Avec le groupe">
+          <div class="gm-overlay"></div>
+          <div class="gm-hover">
+            <span class="gm-tag" data-fr="Groupe" data-en="Band">Groupe</span>
+            <h3 class="gm-title" data-fr="Le Collectif" data-en="The Collective">Le Collectif</h3>
+          </div>
+        </div>
+
+        <div class="gm-item" data-cat="scene" data-aos>
+          <img src="assets/IMG_20260403_121529.jpg" alt="Scène en rose">
+          <div class="gm-overlay"></div>
+          <div class="gm-hover">
+            <span class="gm-tag" data-fr="Concert" data-en="Concert">Concert</span>
+            <h3 class="gm-title" data-fr="Énergie" data-en="Energy">Énergie</h3>
+          </div>
+        </div>
+
+        <!-- STUDIO -->
+        <div class="gm-item" data-cat="studio" data-aos>
+          <img src="assets/2022-04-09 19.57.25.jpg" alt="Session Studio">
+          <div class="gm-overlay"></div>
+          <div class="gm-hover">
+            <span class="gm-tag" data-fr="Studio" data-en="Studio">Studio</span>
+            <h3 class="gm-title" data-fr="Répétition" data-en="Rehearsal">Répétition</h3>
+          </div>
+        </div>
+
+        <div class="gm-item gm-wide" data-cat="studio" data-aos>
+          <img src="assets/20221226_185031.jpg" alt="Enregistrement Live">
+          <div class="gm-overlay"></div>
+          <div class="gm-hover">
+            <span class="gm-tag" data-fr="Enregistrement" data-en="Recording">Enregistrement</span>
+            <h3 class="gm-title" data-fr="Projet Studio" data-en="Studio Project">Projet Studio</h3>
+          </div>
+        </div>
+
+        <div class="gm-item gm-large" data-cat="studio" data-aos>
+          <img src="assets/IMG_20260403_121311.jpg" alt="Projets Musicaux">
+          <div class="gm-overlay"></div>
+          <div class="gm-hover">
+            <span class="gm-tag" data-fr="Création" data-en="Creation">Création</span>
+            <h3 class="gm-title" data-fr="Moments Studio" data-en="Studio Moments">Moments Studio</h3>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">Nadine Bellombre</div>
+          <p class="footer-sub" data-fr="Artiste Vocale · Jazz · Île Maurice" data-en="Vocal Artist · Jazz · Mauritius">Artiste Vocale · Jazz · Île Maurice</p>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html" data-fr="Accueil" data-en="Home">Accueil</a>
+          <a href="biographie.html" data-fr="Biographie" data-en="Biography">Biographie</a>
+          <a href="parcours.html" data-fr="Parcours" data-en="Journey">Parcours</a>
+          <a href="musique.html" data-fr="Musique" data-en="Music">Musique</a>
+          <a href="galerie.html" data-fr="Galerie" data-en="Gallery">Galerie</a>
+          <a href="contact.html" data-fr="Contact" data-en="Contact">Contact</a>
+        </nav>
+        <div class="footer-legal">
+          <p data-fr="Nom légal : Marie Nadine Annabelle Bellombre" data-en="Legal name: Marie Nadine Annabelle Bellombre">Nom légal : Marie Nadine Annabelle Bellombre</p>
+          <p>nadbello@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Nadine Bellombre</p>
+        <p class="footer-note" data-fr="Tous droits réservés" data-en="All rights reserved">Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
